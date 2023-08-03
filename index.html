@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | News homepage</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div class="inContainer">
+        <div class="navbar">
+          <div class="logo">
+            <img src="./assets/images/logo.svg" alt="logo" />
+          </div>
+          <img
+            src="./assets/images/icon-menu.svg"
+            alt=""
+            onclick="toggleMenu()"
+          />
+          <div class="links">
+            <img
+              id="closeButton"
+              src="./assets/images/icon-menu-close.svg"
+              onclick="closeMenu()"
+              alt=""
+            /><a href="">Home</a> <a href="">New</a> <a href="">Popular</a>
+            <a href="">Trending</a> <a href="">Categories</a>
+          </div>
+        </div>
+        <div class="headerImage">
+          <img src="./assets/images/image-web-3-mobile.jpg" alt="x button" />
+        </div>
+
+        <div class="titleText">
+          <h1>The Bright Future of Web 3.0?</h1>
+        </div>
+
+        <div class="titleDescription">
+          <p>
+            We dive into the next evolution of the web that claims to put the
+            power of the platforms back into the hands of the people. But is it
+            really fulfilling its promise?
+          </p>
+
+          <button>Read more</button>
+        </div>
+
+        <div class="sideInfo">
+          <h2>New</h2>
+          <div class="sideInfoElement">
+            <h3>Hydrogen VS Electric Cars</h3>
+            <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+          </div>
+          <hr />
+          <div class="sideInfoElement">
+            <h3>The Downsides of AI Artistry</h3>
+            <p>
+              What are the possible adverse effects of on-demand AI image
+              generation?
+            </p>
+          </div>
+          <hr />
+          <div class="sideInfoElement">
+            <h3>Is VC Funding Drying Up?</h3>
+            <p>
+              Private funding by VC firms is down 50% YOY. We take a look at
+              what that means.
+            </p>
+          </div>
+        </div>
+
+        <div class="articles">
+          <div class="singleArticle">
+            <div class="articleImage">
+              <img src="./assets/images/image-retro-pcs.jpg" alt="retro pc" />
+            </div>
+            <div class="articleText">
+              <div class="articleNumber">01</div>
+              <div class="articleTitle">Reviving Retro PCs</div>
+              <div class="articleDescription">
+                What happens when old PCs are given modern upgrades?
+              </div>
+            </div>
+          </div>
+
+          <div class="singleArticle">
+            <div class="articleImage">
+              <img src="./assets/images/image-top-laptops.jpg" alt="laptop" />
+            </div>
+            <div class="articleText">
+              <div class="articleNumber">02</div>
+              <div class="articleTitle">Top 10 Laptops of 2022</div>
+              <div class="articleDescription">
+                Our best picks for various needs and budgets.
+              </div>
+            </div>
+          </div>
+
+          <div class="singleArticle">
+            <div class="articleImage">
+              <img src="./assets/images/image-top-laptops.jpg" alt="laptop" />
+            </div>
+            <div class="articleText">
+              <div class="articleNumber">03</div>
+              <div class="articleTitle">The Growth of Gaming</div>
+              <div class="articleDescription">
+                How the pandemic has sparked fresh opportunities.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="blur"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
