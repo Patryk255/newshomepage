@@ -189,7 +189,7 @@ body {
     align-items: center;
   }
   #container {
-    max-width: 60%;
+    width: 60%;
   }
   #container .inContainer {
     grid-template-columns: 1fr 1fr 1fr;
@@ -284,6 +284,11 @@ body {
   #container .inContainer .articles .singleArticle {
     display: flex;
     justify-content: space-between;
+  }
+}
+@media (width >= 1024px) and (width <= 1440px) {
+  #container {
+    width: 80%;
   }
 }
 

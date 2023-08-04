@@ -223,7 +223,7 @@ grid-template-areas:
     align-items: center;
   }
   #container{
-    max-width:60%;
+    width:60%;
     
     .inContainer{
       grid-template-columns: 1fr 1fr 1fr;
@@ -344,4 +344,8 @@ grid-template-areas:
   }
 }
 
-
+@media (width >= 1024px) and (width <= 1440px) {
+  #container{
+    width:80%;
+  }
+}
