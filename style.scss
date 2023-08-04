@@ -1,4 +1,6 @@
 $softOrange: hsl(35, 77%, 62%);
+$background: hsl(35, 77%, 62%,0.1);
+$backgroundIn: hsl(35, 77%, 62%,0.01);
 $softRed: hsl(5, 85%, 63%);
 $offWhite: hsl(36, 100%, 99%);
 $grayishBlue: hsl(233, 8%, 79%);
@@ -18,7 +20,7 @@ position: relative;
 body {
   max-width: 100vw;
   min-height: 100%;
-
+  background-color: $background;
 }
 
 .blur   {
@@ -35,6 +37,7 @@ body {
 background-color: $offWhite;
 height: 100%;
 max-width: 100%;
+background-color: $backgroundIn;
 .inContainer {
   max-width: 100%;
   min-height: 100%;
