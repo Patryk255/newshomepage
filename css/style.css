@@ -11,55 +11,221 @@ body {
   min-height: 100%;
 }
 
-@media (max-width: 900px) {
-  .blur {
-    backdrop-filter: brightness(0.5);
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100vw;
-    display: none;
+.blur {
+  backdrop-filter: brightness(0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100vw;
+  display: none;
+}
+
+#container {
+  background-color: hsl(36, 100%, 99%);
+  height: 100%;
+  max-width: 100%;
+}
+#container .inContainer {
+  max-width: 100%;
+  min-height: 100%;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.12fr 0.5fr 0.3fr 0.4fr 0.6fr 1.1fr;
+  grid-template-areas: "navbar" "headerImage" "titleText" "titleDescription" "sideInfo" "articles";
+  row-gap: 0;
+  gap: 0;
+}
+#container .inContainer .navbar {
+  grid-area: navbar;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: auto;
+}
+#container .inContainer .navbar .navbarRight {
+  display: none;
+}
+#container .inContainer .navbar .logo img {
+  width: 4rem;
+}
+#container .inContainer .navbar .links {
+  z-index: 50;
+  width: 70%;
+  min-height: 100vh;
+  background-color: hsl(36, 100%, 99%);
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+  flex-direction: column;
+  align-items: left;
+  padding-top: 30%;
+}
+#container .inContainer .navbar .links a {
+  padding-left: 3rem;
+  text-decoration: none;
+  padding-bottom: 2rem;
+  font-size: 2rem;
+  color: hsl(240, 100%, 5%);
+}
+#container .inContainer .navbar .links img {
+  position: absolute;
+  width: 3rem;
+  top: 1rem;
+  right: 1rem;
+}
+#container .inContainer .headerImage {
+  grid-area: headerImage;
+  margin-bottom: 2rem;
+  background: url("/assets/images/image-web-3-mobile.jpg") center center;
+  background-size: cover;
+}
+#container .inContainer .titleText {
+  grid-area: titleText;
+  font-size: 2rem;
+  font-weight: 800;
+  width: 20ch;
+}
+#container .inContainer .titleText h1 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+#container .inContainer .titleDescription {
+  grid-area: titleDescription;
+  font-size: 15px;
+}
+#container .inContainer .titleDescription p {
+  margin-top: 0;
+  color: hsl(236, 13%, 42%);
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+#container .inContainer .titleDescription button {
+  width: 18rem;
+  min-height: 4rem;
+  border: none;
+  background-color: hsl(5, 85%, 63%);
+  text-transform: uppercase;
+  font-weight: 400;
+  color: hsl(36, 100%, 99%);
+  letter-spacing: 0.4rem;
+}
+#container .inContainer .titleDescription button:hover {
+  cursor: pointer;
+  background-color: hsl(240, 100%, 5%);
+}
+#container .inContainer .sideInfo {
+  grid-area: sideInfo;
+  max-width: 100%;
+  background-color: hsl(240, 100%, 5%);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+#container .inContainer .sideInfo h2 {
+  color: hsl(35, 77%, 62%);
+  font-size: 3rem;
+  margin-top: 0;
+}
+#container .inContainer .sideInfo h3 {
+  color: hsl(36, 100%, 99%);
+  font-size: 2rem;
+}
+#container .inContainer .sideInfo h3:hover {
+  color: hsl(35, 77%, 62%);
+  cursor: pointer;
+}
+#container .inContainer .sideInfo p {
+  font-size: 15px;
+  color: hsl(233, 8%, 79%);
+}
+#container .inContainer .sideInfo hr {
+  border: 1px solid hsl(236, 13%, 42%);
+}
+#container .inContainer .articles {
+  max-width: 100%;
+  max-height: 100%;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+#container .inContainer .articles .singleArticle {
+  display: flex;
+}
+#container .inContainer .articles .singleArticle img {
+  width: 10rem;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+}
+#container .inContainer .articles .singleArticle .articleText .articleNumber {
+  font-size: 3rem;
+  font-weight: 800;
+  color: hsl(233, 8%, 79%);
+}
+#container .inContainer .articles .singleArticle .articleText .articleTitle {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+#container .inContainer .articles .singleArticle .articleText .articleTitle:hover {
+  color: hsl(5, 85%, 63%);
+  cursor: pointer;
+}
+#container .inContainer .articles .singleArticle .articleText .articleDescription {
+  font-size: 15px;
+  color: hsl(236, 13%, 42%);
+}
+
+@media (min-width: 900px) {
+  body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   #container {
-    background-color: hsl(36, 100%, 99%);
-    height: 100%;
-    max-width: 100%;
+    max-width: 60%;
   }
   #container .inContainer {
-    max-width: 100%;
-    min-height: 100%;
-    padding: 1rem;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.12fr 0.5fr 0.3fr 0.4fr 0.6fr 1.1fr;
-    grid-template-areas: "navbar" "headerImage" "titleText" "titleDescription" "sideInfo" "articles";
-    row-gap: 0;
-    gap: 0;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.3fr 1fr 0.5fr 0.8fr;
+    gap: 2rem;
+    grid-template-areas: "navbar navbar navbar" "headerImage headerImage sideInfo" "titleText titleDescription sideInfo" "articles articles articles";
   }
   #container .inContainer .navbar {
-    grid-area: navbar;
+    margin-top: auto;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-top: 0;
-    margin-bottom: auto;
+  }
+  #container .inContainer .navbar #closeButton, #container .inContainer .navbar #menuButton {
+    display: none;
   }
   #container .inContainer .navbar .logo img {
-    width: 4rem;
+    width: 5rem;
+  }
+  #container .inContainer .navbar .navbarRight {
+    font-size: 15px;
+    display: flex;
+    width: 41rem;
+    justify-content: space-between;
+  }
+  #container .inContainer .navbar .navbarRight a {
+    text-decoration: none;
+    color: hsl(236, 13%, 42%);
+  }
+  #container .inContainer .navbar .navbarRight a:hover {
+    color: hsl(5, 85%, 63%);
   }
   #container .inContainer .navbar .links {
-    z-index: 50;
-    width: 70%;
-    min-height: 100vh;
-    background-color: hsl(36, 100%, 99%);
-    position: absolute;
-    top: 0;
-    right: 0;
+    flex-direction: row;
+    display: flex;
+    background-color: transparent;
     display: none;
-    flex-direction: column;
-    align-items: left;
-    padding-top: 30%;
   }
   #container .inContainer .navbar .links a {
     padding-left: 3rem;
@@ -67,105 +233,57 @@ body {
     padding-bottom: 2rem;
     font-size: 2rem;
     color: hsl(240, 100%, 5%);
-  }
-  #container .inContainer .navbar .links img {
-    position: absolute;
-    width: 3rem;
-    top: 1rem;
-    right: 1rem;
-  }
-  #container .inContainer .headerImage {
-    grid-area: headerImage;
-    margin-bottom: 2rem;
-  }
-  #container .inContainer .headerImage img {
-    width: 100%;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  #container .inContainer .titleText {
-    grid-area: titleText;
-    font-size: 2rem;
-    font-weight: 800;
-    width: 20ch;
-  }
-  #container .inContainer .titleText h1 {
-    margin-top: 0;
-    margin-bottom: 2rem;
-  }
-  #container .inContainer .titleDescription {
-    grid-area: titleDescription;
-    font-size: 15px;
-  }
-  #container .inContainer .titleDescription p {
-    margin-top: 0;
-    color: hsl(236, 13%, 42%);
-    line-height: 1.5;
-    margin-bottom: 2rem;
-  }
-  #container .inContainer .titleDescription button {
-    width: 18rem;
-    min-height: 4rem;
-    border: none;
-    background-color: hsl(5, 85%, 63%);
-    text-transform: uppercase;
-    font-weight: 700;
-    color: hsl(36, 100%, 99%);
-    letter-spacing: 0.4rem;
+    display: block;
   }
   #container .inContainer .sideInfo {
-    grid-area: sideInfo;
-    max-width: 100%;
-    background-color: hsl(240, 100%, 5%);
-    padding: 2rem;
-    margin-bottom: 2rem;
+    max-height: 100%;
+    margin: 0;
   }
-  #container .inContainer .sideInfo h2 {
-    color: hsl(35, 77%, 62%);
-    font-size: 3rem;
-    margin-top: 0;
+  #container .inContainer .titleText {
+    width: 100%;
+    max-height: 100%;
+    margin-top: auto;
   }
-  #container .inContainer .sideInfo h3 {
-    color: hsl(36, 100%, 99%);
-    font-size: 2rem;
+  #container .inContainer .titleText h1 {
+    width: 8ch;
+    font-size: 6rem;
+    padding: 0;
+    margin: 0;
   }
-  #container .inContainer .sideInfo p {
-    font-size: 15px;
-    color: hsl(233, 8%, 79%);
+  #container .inContainer .titleDescription {
+    width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
   }
-  #container .inContainer .sideInfo hr {
-    border: 1px solid hsl(236, 13%, 42%);
+  #container .inContainer .titleDescription p {
+    margin: 0;
+    padding: 0;
+    width: 36ch;
   }
-  #container .inContainer .articles {
+  #container .inContainer .titleDescription button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+  }
+  #container .inContainer .headerImage {
     max-width: 100%;
     max-height: 100%;
-    margin-top: 3rem;
+    background: url("/assets/images/image-web-3-desktop.jpg") center center;
+    background-size: cover;
+  }
+  #container .inContainer .articles {
+    display: grid;
+    grid-area: articles;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 0;
   }
   #container .inContainer .articles .singleArticle {
     display: flex;
-  }
-  #container .inContainer .articles .singleArticle img {
-    width: 10rem;
-    padding-right: 2rem;
-    padding-bottom: 2rem;
-  }
-  #container .inContainer .articles .singleArticle .articleText .articleNumber {
-    font-size: 3rem;
-    font-weight: 800;
-    color: hsl(233, 8%, 79%);
-  }
-  #container .inContainer .articles .singleArticle .articleText .articleTitle {
-    font-size: 1.8rem;
-    font-weight: 800;
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
-  }
-  #container .inContainer .articles .singleArticle .articleText .articleDescription {
-    font-size: 15px;
-    color: hsl(236, 13%, 42%);
+    justify-content: space-between;
   }
 }
 
